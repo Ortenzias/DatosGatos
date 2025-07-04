@@ -8,11 +8,12 @@ import { useImagenGato } from "./hooks/useImagenGato";
 function App() {
   
   //Asi se reciben dos objetos de un metodo que devuelve dos objetos
-  const { dato, datoActualizado } = useDatoGato()
+  const { dato, conseguirDatoYActualizarlo } = useDatoGato()
   const { imagen, imagenNombre } = useImagenGato({dato})
   
   const handleClick = () => {
-    datoActualizado()
+    console.log("Pasa adentro del HandleClick")
+    conseguirDatoYActualizarlo()
     //conseguirDatoRandom().then(setDato);    Para ahorrar codigo, no se va usar de esta manera
   };
 
